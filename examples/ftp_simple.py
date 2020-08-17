@@ -10,16 +10,12 @@ def main():
     (procmon) and assumes that the FTP server is already running.
     """
     session = Session(target=Target(connection=SocketConnection("127.0.0.1", 21)))
-    
+
     port = 69
     host = "127.0.0.1"
     protocol = "udp"
 
-    session = Session(
-            target=Target(
-                connection = SocketConnection(host, port, proto=protocol),
-            ),
-    )
+    session = Session(target=Target(connection=SocketConnection(host, port, proto=protocol),),)
 
     s_initialize("user")
     s_string("USER")
