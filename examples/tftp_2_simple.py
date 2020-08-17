@@ -31,12 +31,13 @@ def main():
     s_string("filename")
     s_static("\x00")
     s_static("mail")
-    s_static("\x00") 
+    s_static("\x00")
 
     session.connect(s_get("WRQ"))
     # session.connect(s_get("RRQ"))
 
     session.fuzz()
+
 
 if __name__ == "__main__":
 
